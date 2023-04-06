@@ -1,33 +1,45 @@
+import { useState } from "react";
 import "../container.scss";
 import "../Header/Header.scss";
 import heroImg from '../images/hero-img.png';
 const Header = () => {
+
+  const [active, setActive] = useState('nav__menu');
+  const [closeNav, setCloseNav] = useState('nav__burger')
+
+  const activeNav = () =>{
+    active === 'nav__menu' ? setActive('nav__menu active__menu') : setActive('nav__menu');
+    
+    // Close Navbar
+    closeNav === 'nav__burger'? setCloseNav('nav__burger close__burger') : setCloseNav('nav__burger');
+
+  }
+  
+
+
   return (
     <>
       <header>
         <nav className="navbar">
           <div className="container">
             <div className="nav">
-              <a href="#" className="nav__logo">
-                FAZLIDDIN
-              </a>
-              <ul className="nav__menu">
+              <a href="#" className="nav__logo">FAZLIDDIN</a>
+              <ul className={active}>
                 <li className="nav__menu--item">
-                  <a href="#" className="nav__menu--link">
-                    Works
-                  </a>
+                  <a href="#" className="nav__menu--link"> Works</a>
                 </li>
                 <li className="nav__menu--item">
-                  <a href="#" className="nav__menu--link">
-                    Blog
-                  </a>
+                  <a href="#" className="nav__menu--link">Blog</a>
                 </li>
                 <li className="nav__menu--item">
-                  <a href="#" className="nav__menu--link">
-                    Contact
-                  </a>
+                  <a href="#" className="nav__menu--link">Contact</a>
                 </li>
               </ul>
+              <div className={closeNav} onClick={activeNav}>
+                  <hr className="nav__burger--line nav__burger--line1" />
+                  <hr className="nav__burger--line nav__burger--line2" />
+                  <hr className="nav__burger--line nav__burger--line3" />
+              </div>
             </div>
           </div>
         </nav>

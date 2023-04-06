@@ -1,0 +1,79 @@
+.article__cards {
+    &--card1 {
+        column-gap: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #e0e0e0;
+        padding-bottom: 15px;
+        &--title {
+            max-width: 305px;
+            font-family: "Heebo";
+            font-weight: 700;
+            font-size: 30px;
+            color: #21243d;
+            margin-bottom: 20px;
+        }
+        &--year {
+            padding: 3px 10px;
+            background: #142850;
+            border-radius: 16px;
+            font-weight: 900;
+            font-size: 18px;
+            color: #ffffff;
+            margin-right: 35px;
+        }
+        &--spn {
+            font-family: "Heebo";
+            font-weight: 400;
+            font-size: 20px;
+            color: #8695a4;
+        }
+        &--text {
+            max-width: 500px;
+            margin-top: 20px;
+            font-family: "Heebo";
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: #21243d;
+        }
+    }
+    &--img {
+        max-width: 400px;
+        width: 100%;
+        height: 250px;
+    }
+}
+@media screen and (max-width:768px){
+    .article__cards {
+     
+        &--card1 {
+            padding: 0 20px;
+        }
+        &--img {
+            max-width: 350px;
+            height: 220px;
+        }
+    }
+}
+@media screen and (max-width:680px){
+    .article__cards {
+           &--body{
+            padding: 0 20px 20px 10px;
+            box-shadow: 0 0 4px silver;
+        }
+        &--card1 {
+            flex-direction: column;
+            justify-content: center;
+            max-width: 450px;
+            height: 500px;
+            margin: 0 auto;
+        }
+        &--img {
+            max-width: 450px;
+            height: 250px;
+        }
+    }
+}
