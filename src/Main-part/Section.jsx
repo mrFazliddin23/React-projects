@@ -1,3 +1,4 @@
+import "../container.scss";
 import "../Main-part/Section.scss";
 import card1Img from "../images/designing.png";
 import card2Img from "../images/vibrant.png";

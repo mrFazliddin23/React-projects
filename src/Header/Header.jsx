@@ -1,5 +1,6 @@
+import "../container.scss";
 import "../Header/Header.scss";
-import heroImg from '../images/hero-img.png'
+import heroImg from '../images/hero-img.png';
 const Header = () => {
   return (
     <>

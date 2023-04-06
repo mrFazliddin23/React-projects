@@ -3,10 +3,10 @@ import Section from "./Main-part/Section";
 const App = () => {
   return (
     <div>
-      <Header/>
-      <Section/>
+      <Header />
+      <Section />
     </div>
-  )
-}
+  );
+};
 
 export default App;
